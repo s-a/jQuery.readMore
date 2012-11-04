@@ -4,14 +4,14 @@ jQuery.readMore adds a read more link to HTML elements that will overflow regard
 
 
 ```html
-      <div class="test__box vertCentered">
-        Vertically Centered Text
-      </div>
-      <div class="test__box centeredMultiLine">
-        "Centered<br>
-              Multiline<br>
-              Text"
-      </div>
+<div class="test__box vertCentered">
+	Vertically Centered Text
+</div>
+<div class="test__box centeredMultiLine">
+	"Centered<br>
+      Multiline<br>
+      Text"
+</div>
 ```	
 
 ```js
