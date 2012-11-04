@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="mocha.js"></script> 
+    <link href="mocha.css" rel="stylesheet" type="text/css"></link>
+    <script src="test.js"></script> 
+    <link href="test.css" rel="stylesheet" type="text/css"></link>
+    <script src="jquery.readmore.js"></script> 
+     
+    <style> 
+      .read__more__link {
+        color:#2E00B8;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+      .read__more__link:hover {
+        text-decoration: underline;
+      }
+
+      .read__more__assigned { 
+        background-color: #6190FF;
+      }
+    </style>      
+    
+
+    <script>
+
+      function cloneItems(items,width,height,cssClass) {
+          items.clone(true).addClass(cssClass).height(height).width(width).appendTo($('body')); 
+          return items;
+      }
+
+      function initialzeTests () {
+        var 
+          _clones1 = $('.test__box').each(function () {
+
+            $(this).attr('title', $.trim($(this).text()));
+          }).clone(true);
+
+        cloneItems(_clones1, 140, 70+13,'clone1');
+        cloneItems(_clones1, 170, 70+13,'clone2');
+        cloneItems(_clones1, 270, 70+13,'clone3');
+      }
+
+      $(function (argument) {
+        initialzeTests();
+
+        $('.test__box:not(.clone3)').readMore({ 
+          title:'Read more',
+          text:'...',
+          href:function () {
+            return '#'+$(this).index();
+          }
+        });
+
+        $('.clone3').readMore({ 
+          title:'Read more',
+          text:'...',
+          href:function () {
+            return '#'+$(this).index();
+          }
+        });
+        $('.read__more__link').parent().addClass('read__more__assigned');
+
+       // var runner = mocha.run();
+      });
+
+    </script>
+
+   
+  </head>
+  <body>
+
+    <h1>jQuery.readMore</h1>
+    <div id="mocha"></div>
+    <span class="header">
+    <h3> 
+        jQuery.readMore adds a read more link to HTML elements that will overflow regarding its content. The plugin <b>respects existing CSS</b>  and fits within the box it is placed, regardless of padding,
+        line-height, font-face, or letter-spacing. This is an alternative to CSS rule "text-overflow: ellipsis". With jQuery.readMore it is possible to create custom read more links and display cool excerpts.
+    </h3>
+       
+    </span>
+    <div class="test__containter">
+      <div class="test__box">
+        "Text"
+      </div>
+      <div class="test__box horizCentered">
+        "Centered Text"
+      </div>
+      <div class="test__box multiLine">
+        "Multiline<br>
+              Text"
+      </div>
+      <div class="test__box vertCentered">
+        Vertically Centered Text
+      </div>
+      <div id="centeredMultiLine" class="test__box">
+        "Centered<br>
+              Multiline<br>
+              Text"
+      </div>
+      <br>
+      <div class="test__box maxFontSize">
+        "Set a Maximum<br>
+              Font Size"
+      </div>
+      <div class="test__box letterSpacing">
+        "Use Any
+              Letter Spacing"
+      </div>
+      <div class="test__box lineHeight">
+        "Use Any
+              Line Height"
+      </div>
+      <div class="test__box fontFaces">
+        "Use Any Custom
+              Font Face"
+      </div>
+      <div class="test__box padding">
+        "Use Any Custom Padding"
+      </div>
+      
+      <div id="superlong" class="test__box">
+        "THIS_IS_A_MEGA_SUPER_LONG_TEXT_IN_A_BOX"
+      </div>
+    </div>  
+  </body>
+</html>

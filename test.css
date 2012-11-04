@@ -1,0 +1,44 @@
+ body{
+ 	font-size: 22px;
+ }
+
+.fontFaces{
+	font-family: "Astloch", monospace;
+}
+.letterSpacing{
+	letter-spacing: 11px;
+	font-size: 19px;
+}
+.lineHeight{
+	line-height: 70px;
+	font-size: 16px;
+}
+.padding{
+	padding: 11px; 
+} 
+
+.horizCentered,.centeredMultiLine,.vertCentered{
+	text-align: center;
+	font-size: 24px;
+}
+ 
+.test__box{
+	border-style: solid;
+	border-color: #F4C4A9;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	border-width: 1px;
+	margin: 11px;
+	float:left;
+	overflow: hidden;
+	color: #000; 
+	height: 70px;
+	width: 120px;
+}
+ 
