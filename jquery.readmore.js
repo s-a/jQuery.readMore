@@ -1,3 +1,7 @@
+/*!
+* jQuery readMore plugin to display custom read more links in excerpts.
+* By Stephan Ahlf,  (MIT Licensed)
+*/  
 (function( $ ){
 	$.isOverflowed = function(e) {
 		var
