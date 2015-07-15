@@ -1,5 +1,9 @@
 jQuery.readMore
 =================
+
+[![Donate](http://s-a.github.io/donate/donate.svg)](http://s-a.github.io/donate/)  
+
+
 jQuery.readMore adds a read more link to HTML elements that will overflow regarding its content. The plugin respects existing CSS and fits within the box it is placed, regardless of padding, line-height, font-face, or letter-spacing. This is an alternative to CSS rule "text-overflow: ellipsis". With jQuery.readMore it is possible to create custom read more links and display cool excerpts.
 
 
